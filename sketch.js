@@ -9,7 +9,7 @@ var input;
 
 function setup() {
     // put setup code here
- createCanvas(400, 400);
+ createCanvas(windowWidth, 300);
     
 //    loadJSON('http://api.openweathermap.org/data/2.5/weather?q=London&APPID=d5afccd0a010330873f477846a4dde3a&units=imperial', gotData);
     var button = select('#submit');
@@ -39,7 +39,7 @@ function draw() {
         var rainbow = wallawalla.main;
         ellipse(10, 10, 10, 10);
 //                text(round(rainbow.temp), 10, 10);
-        ellipse(100, 200, round(rainbow.temp), round(rainbow.temp)); 
-        ellipse(200, 200, round(rainbow.humidity), round(rainbow.humidity));
+        ellipse(width/2-100, 150, round(rainbow.temp), round(rainbow.temp)); 
+        ellipse(width/2+100, 150, round(rainbow.humidity), round(rainbow.humidity));
     }
 }
